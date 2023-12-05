@@ -1,0 +1,104 @@
+table {
+    border-collapse: collapse; 
+    border: 1px solid #3f2b21;
+  }
+  tr {
+    
+  }
+  thead { /* Looks like tr*/
+    
+  }
+  tfoot {
+    
+  }
+  th, /* cells in thead */
+  td {
+    padding: .5rem;
+    border-bottom: 1px solid #ccae51;
+  }
+  th {
+    text-align: left;
+    background-color: #ccae51;
+    color: white;
+  }
+  thead tr:first-child,
+  thead tr:first-child th {
+    background-color: #3f2b21;
+    text-align: center;
+    border-left: 1px solid white;
+    font-size: 1.125rem;
+  }
+  table caption { 
+    font-weight: bold;
+    text-align: left;
+    font-size: 1.25rem;
+    padding: .5rem 0;
+    color: #ccae51;
+  }
+  tfoot tr {
+    background-color: #3f2b21;
+    color: white;
+    font-weight: bold;
+  }
+  /*tfoot tr td:first-child {
+    border: none;
+    background-color: white;
+  }*/
+  tfoot tr:last-child td {
+    border-bottom: none;
+  }
+  /* Striped rows */
+  tbody tr:nth-child(even){
+    background-color: rgba(204,174,81,.2);
+  }
+  
+  /* Style col groups */
+  /*.retail {
+    background-color: #eee;
+  }
+  .case {
+    background-color: #efe;
+  }
+  .item {
+    background-color: #eee;
+  }*/
+  
+  /* Making tables responsive - https://adrianroselli.com/2017/11/a-responsive-accessible-table.html */
+  
+  .table-scroll { /* simplest option add a div with class table-scroll */
+    overflow: auto;
+  }
+  
+  /* Or layout the table as block */
+  @media (max-width: 700px) {
+    table {
+      border: none;
+    }
+    table,
+    tr,
+    td {
+      display: block;
+    }
+    thead,
+    th {
+      display: none;
+    }
+    tbody,
+    tfoot {
+      border: 1px solid #3f2b21;
+    }
+    td:nth-child(1)::before { content: "_Id #: "; font-weight: bold; }
+    td:nth-child(2)::before { content: "Name: "; font-weight: bold; }
+    td:nth-child(3)::before { content: "Event Name: "; font-weight: bold; }
+    td:nth-child(4)::before { content: "College Name: "; font-weight: bold; }
+    td:nth-child(5)::before { content: "Enrollment No: "; font-weight: bold; }
+    td:nth-child(6)::before { content: "Branch: "; font-weight: bold; }
+    td:nth-child(7)::before { content: "Passing Year: "; font-weight: bold; }
+    td:nth-child(8)::before { content: "Phone No: "; font-weight: bold; }
+    td:nth-child(9)::before { content: "Email: "; font-weight: bold; }
+    td:nth-child(10)::before { content: "Message: "; font-weight: bold; }
+    
+    tfoot td:nth-child(1)::before,
+    tfoot td:nth-child(2)::before { content: ""; }
+  }
+  

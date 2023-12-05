@@ -1,0 +1,36 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package": "pkg . -t node14-win-x64 -o my-app.exe"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "sqlite3": "^5.1.6"
+  },
+  "devDependencies": {
+    "open": "^9.1.0",
+    "pkg": "^5.8.1"
+  },
+  "pkg": {
+    "targets": [
+      "node14-win-x64"
+    ],
+    "outputPath": "dist",
+    "assets": [
+      "**/*",
+      "!node_modules"
+    ]
+  },
+  "bin": {
+    "btcm": "./server.js"
+  }
+}
